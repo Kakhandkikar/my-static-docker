@@ -38,5 +38,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/my-static-site:latest
-            ghcr.io/${{ github.repository_owner }}/my-static-site:${{ github.sha }}
+            ghcr.io/kakhandkikar/my-static-site:latest
+            ghcr.io/kakhandkikar/my-static-site:${{ github.sha }}
