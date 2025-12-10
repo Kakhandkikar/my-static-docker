@@ -42,5 +42,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/my-static-site:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/my-static-site:${{ github.sha }}
+            kakhandkikar/my-static-site:latest
+            kakhandkikar/my-static-site:${{ github.sha }}
