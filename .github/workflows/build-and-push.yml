@@ -34,6 +34,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+            # === NEW STEP: create env.html from GitHub secret ===
+      - name: Create env.html from secret
+        run: |
+          # Write the secret to env.html (preserves newlines)
+          printf '%s' "${{ secrets.ENV_HTML_CONTENT }}" > env.html
+
 
       # Step 5: Build the Docker image and push to Docker Hub
       - name: Build and push image
