@@ -42,7 +42,7 @@ jobs:
 
       - name: Create index.html from secret
         run: |
-          printf '%s' "${{ secrets.ENV_HTML_CONTENT }}" >> index.html
+          printf '%s' "${{ secrets.ENV_HTML_CONTENT }}" > index.html
 
 
       # Step 5: Build the Docker image and push to Docker Hub
