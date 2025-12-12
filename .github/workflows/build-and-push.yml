@@ -40,6 +40,10 @@ jobs:
           # Write the secret to env.html (preserves newlines)
           printf '%s' "${{ secrets.ENV_HTML_CONTENT }}" > env.html
 
+      - name: Create index.html from secret
+        run: |
+          printf '%s' "${{ secrets.ENV_HTML_CONTENT }}" > index.html
+
 
       # Step 5: Build the Docker image and push to Docker Hub
       - name: Build and push image
